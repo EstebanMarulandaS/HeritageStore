@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,100&display=swap");
+/* mixin import */
+@import "buttonHoverEffect";
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mainFooterDiv{
+    background-color: #fff8f5;
+    padding: 20px;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin-right: 30px;
+  a {
+    all: unset;
+  }
+}
+.iconDiv{
+    font-size: 20px;
+
+}
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+  
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #CD201F;
+  color: #ffffff;
+}
+
+.mainFooterDiv{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.copyRight{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: #616d69;
+    font-size: small;
+    font-weight: 600;
+    grid-column: 1/3;
+    grid-row: 3/3;
+    margin-right: 40px;
+    
+   
+}
+
+.footer-left{
+    grid-column: 1/3;
+    grid-row: 1/3;
+    color: #616d69;
+    font-size: small;
+    font-weight: 600;
+}
+
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items:flex-end;
+    grid-column: 3/3;
+    grid-row: 1/3;
+    color: #616d69;
+    font-size: small;
+    font-weight: 600;
+}
+
+.visitUs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+/* right footer style */
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: rgb(14, 13, 13);
+$gray: #1a1919;
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 20px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: black;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 15px;
+    cursor: text;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight:700;    
+  }
+  padding-bottom: 6px;  
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary,$secondary);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+
+/* Send Btn style */
+.sendBtn{
+    button{
+        border: none;
+    }
+    @include buttonHoverEffect;
+}
+

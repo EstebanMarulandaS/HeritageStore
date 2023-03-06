@@ -1,0 +1,25 @@
+ @mixin buttonStyle {
+    
+        color: #020303;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: small;
+        border-radius: 5px;
+        background:
+            radial-gradient(100% 100% at top left, #b6e2d3 98%, #229c73),
+            radial-gradient(100% 100% at bottom right, #b6e2d3 98%, #229c73),
+            radial-gradient(100% 100% at top left, #b6e2d3 98%, #229c73),
+            radial-gradient(100% 100% at bottom right, #b6e2d3 98%, #229c73),
+            #229c73;
+        -webkit-background-clip: text, text, padding-box, padding-box, text;
+        background-clip: text, text, padding-box, padding-box, text;
+        background-size: 0% 0%;
+        background-position: top left, bottom right;
+        background-repeat: no-repeat;
+        transition: 0.5s;
+
+        &:hover {
+            background-size: 50% 100%;
+            border-radius: 20px;
+        }
+    }

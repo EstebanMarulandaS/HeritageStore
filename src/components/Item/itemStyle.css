@@ -1,0 +1,52 @@
+.productsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.productsContainer .cardProduct {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 20px;
+  width: 300px;
+  height: 500px;
+  color: #616d69;
+  font-size: small;
+  font-weight: 600;
+}
+.productsContainer .cardProduct .card {
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: all;
+  transition-duration: 0.5s;
+}
+.productsContainer .cardProduct .card:hover {
+  transform: translateY(3px);
+  box-shadow: 1px 2px 10px gray;
+  border-radius: 10px;
+}
+.productsContainer .cardProduct .card .cardPrice {
+  font-size: larger;
+  color: #1e3e45;
+}
+.productsContainer .cardProduct .card img {
+  height: 300px;
+}
+.productsContainer .cardProduct button {
+  color: #020303;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: small;
+  border-radius: 5px;
+  background: radial-gradient(100% 100% at top left, #b6e2d3 98%, #229c73), radial-gradient(100% 100% at bottom right, #b6e2d3 98%, #229c73), radial-gradient(100% 100% at top left, #b6e2d3 98%, #229c73), radial-gradient(100% 100% at bottom right, #b6e2d3 98%, #229c73), #229c73;
+  -webkit-background-clip: text, text, padding-box, padding-box, text;
+  background-clip: text, text, padding-box, padding-box, text;
+  background-size: 0% 0%;
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.productsContainer .cardProduct button:hover {
+  background-size: 50% 100%;
+  border-radius: 20px;
+}/*# sourceMappingURL=itemStyle.css.map */

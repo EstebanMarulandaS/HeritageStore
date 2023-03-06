@@ -1,0 +1,42 @@
+@import "buttonStyle";
+
+.productsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+
+
+  .cardProduct {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 20px;
+    width: 300px;
+    height: 500px;
+    color: #616d69;
+    font-size: small;
+    font-weight: 600;
+    .card{
+      height: fit-content;
+      transition: all;
+      transition-duration: 0.5s;
+      &:hover{
+        transform: translateY(3px);
+        box-shadow: 1px 2px 10px gray;
+        border-radius: 10px;
+      }
+      .cardPrice{
+        font-size: larger;
+        color:#1e3e45;
+       }
+      img{
+        height: 300px;
+      }
+    }
+    button {
+      @include buttonStyle;
+
+    }
+  }
+}
