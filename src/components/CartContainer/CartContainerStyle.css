@@ -297,4 +297,41 @@ p {
   border-right: none;
   border-left: none;
   background-color: #253c20;
+}
+
+/* responsive phones */
+@media screen and (width: 390px) and (height: 844px) {
+  /* main_cart_container_div */
+  .main_cart_container_div {
+    flex-direction: column;
+  }
+  /* products_div */
+  .products_div {
+    width: 100%;
+  }
+  /* responsive-table */
+  .responsive-table li {
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .responsive-table .col-1,
+  .responsive-table .col-2,
+  .responsive-table .col-3,
+  .responsive-table .col-4 {
+    width: 100%;
+  }
+  .responsive-table #first_column,
+  .responsive-table #second_column {
+    margin-right: 0;
+  }
+  /* empty_products_div */
+  .empty_products_div h2 {
+    font-size: 20px;
+    color: #d16710;
+  }
+  .empty_products_div .emptycart_div img {
+    width: 100%;
+    max-width: 300px;
+  }
 }/*# sourceMappingURL=CartContainerStyle.css.map */

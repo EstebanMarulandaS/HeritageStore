@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../context/cartContext";
 import "../CartContainer/CartContainerStyle.css";
 import logo from "../assets/logo.png";
+import preview from "../assets/preview.png";
 import {
   BsPlusSquare,
   BsDashSquare,
@@ -69,10 +70,7 @@ export const CartContainer = () => {
       <div className="empty_products_div">
         <h2>Oops! Your cart is empty, start shopping!</h2>
         <div className="emptycart_div">
-          <img
-            src="https://cdn3.iconfinder.com/data/icons/shopping-and-ecommerce-29/90/empty_cart-512.png"
-            alt="emptyCart"
-          ></img>
+          <img src={preview} alt="emptyCart"></img>
         </div>
         <div className="go_to_shopping_div">
           <Link to={"/"}>
@@ -178,7 +176,7 @@ export const CartContainer = () => {
               <p>Shipping address</p>
               <input
                 type="text"
-                class="inputbox"
+                className="inputbox"
                 name="name"
                 placeholder="enter your shipping address"
                 required
@@ -186,7 +184,7 @@ export const CartContainer = () => {
               <p>Full Name</p>
               <input
                 type="text"
-                class="inputbox"
+                className="inputbox"
                 name="name"
                 placeholder="enter your full name"
                 required
@@ -194,7 +192,7 @@ export const CartContainer = () => {
               <p>Cardholder Name</p>
               <input
                 type="text"
-                class="inputbox"
+                className="inputbox"
                 name="name"
                 placeholder="enter your cc name"
                 required
@@ -202,7 +200,7 @@ export const CartContainer = () => {
               <p>Card Number</p>
               <input
                 type="number"
-                class="inputbox"
+                className="inputbox"
                 name="card_number"
                 placeholder="CC number"
                 id="card_number"
@@ -210,33 +208,38 @@ export const CartContainer = () => {
               />
 
               <p>Card Type</p>
-              <select class="inputbox" name="card_type" id="card_type" required>
+              <select
+                className="inputbox"
+                name="card_type"
+                id="card_type"
+                required
+              >
                 <option value="">--Select a Card Type--</option>
                 <option value="Visa">Visa</option>
                 <option value="RuPay">RuPay</option>
                 <option value="MasterCard">MasterCard</option>
               </select>
-              <div class="expcvv">
-                <p class="expcvv_text">Expiry</p>
+              <div className="expcvv">
+                <p className="expcvv_text">Expiry</p>
                 <input
                   type="date"
-                  class="inputbox"
+                  className="inputbox"
                   name="exp_date"
                   id="exp_date"
                   required
                 />
 
-                <p class="expcvv_text2">CVV</p>
+                <p className="expcvv_text2">CVV</p>
                 <input
                   type="password"
-                  class="inputbox"
+                  className="inputbox"
                   name="cvv"
                   id="cvv"
                   placeholder="* * *"
                   required
                 />
               </div>
-              <button type="submit" class="button">
+              <button type="submit" className="button">
                 CheckOut
               </button>
             </form>
