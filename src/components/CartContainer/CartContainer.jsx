@@ -52,7 +52,7 @@ export const CartContainer = () => {
         position: "center",
         background: "#95A5A6",
       });
-       emptyCart()
+      emptyCart();
     });
   };
 
@@ -69,7 +69,10 @@ export const CartContainer = () => {
       <div className="empty_products_div">
         <h2>Oops! Your cart is empty, start shopping!</h2>
         <div className="emptycart_div">
-          <img src="https://www.reprotel.com/content/images/empty-cart.png" alt="emptyCart"></img>
+          <img
+            src="https://cdn3.iconfinder.com/data/icons/shopping-and-ecommerce-29/90/empty_cart-512.png"
+            alt="emptyCart"
+          ></img>
         </div>
         <div className="go_to_shopping_div">
           <Link to={"/"}>
@@ -79,7 +82,6 @@ export const CartContainer = () => {
       </div>
     );
   }
-
 
   return (
     <div className="main_cart_container_div">
