@@ -1,3 +1,21 @@
-.mainItemsDiv{
+.mainItemsDiv {
     background-color: rgb(255 248 245);
+
+
+    @media screen and (width: 390px) and (height: 844px) {
+
+        .productsContainer {
+            display: grid;
+            grid-template-columns: max-content;
+            grid-template-rows: max-content;
+            justify-content: space-around;
+        }
+
+        .cardProduct {
+            grid-column: 1;
+            grid-row: auto;
+            justify-content: center;
+        }
+    }
+
 }

@@ -252,4 +252,59 @@
 .sendBtn button:hover {
   background-size: 50% 100%;
   border-radius: 15%;
+}
+
+/* Resposive for phones */
+@media screen and (width: 390px) and (height: 844px) {
+  .mainFooterDiv {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 10px;
+  }
+  .wrapper {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-content: center;
+    margin-right: 0;
+    margin-top: 50px;
+  }
+  .copyRight {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 0;
+  }
+  .footer-left {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+    align-self: center;
+  }
+  .footer-right {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: center;
+    align-self: center;
+  }
+  .visitUs {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .form__group {
+    width: 100%;
+  }
+  .form__field {
+    font-size: 1rem;
+    padding: 15px 0;
+  }
+  .form__label {
+    font-size: 0.9rem;
+  }
+  .sendBtn button {
+    padding: 10px 20px;
+  }
 }/*# sourceMappingURL=footerStyle.css.map */
