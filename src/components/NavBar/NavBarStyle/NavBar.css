@@ -16,7 +16,7 @@ header {
 .headerDiv {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 2;
+  grid-template-rows: auto;
 }
 
 .items {
@@ -90,7 +90,7 @@ header {
 }
 
 /* ImgLogoDiv */
-.imgLogoDiv :hover {
+.imgLogoDiv:hover {
   position: relative;
   transform: translateY(20px) scale(1.15);
   transform-origin: 50% bottom;
@@ -100,15 +100,13 @@ header {
 /* Search/stories and whatsapp div styling */
 .searchDiv {
   margin-right: 20px;
+  /* Mixin NavBar hover effect */
 }
 .searchDiv ul {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   margin-top: 30px;
 }
-
-/* Mixin NavBar hover effect */
 .searchDiv a {
   text-decoration: none;
 }
@@ -171,8 +169,7 @@ header {
   grid-column: 2/3;
   grid-row: 1/2;
 }
-
-.logo {
+.imgLogoDiv .logo {
   height: 150px;
   width: 250px;
   margin-left: 150px;
@@ -181,7 +178,7 @@ header {
 /* itemsDiv styling */
 .itemsDiv {
   grid-column: 2/3;
-  grid-row: 2/2;
+  grid-row: 2/3;
   margin-top: 20px;
 }
 .itemsDiv ul {
@@ -190,44 +187,146 @@ header {
   justify-content: space-between;
 }
 
-/* Responsive design phone */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1200px) {
   .headerDiv {
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 4/4;
-  }
-  .searchDiv {
-    font-size: small;
-    grid-column: 1/1;
-    grid-row: 1/1;
-    width: -moz-max-content;
-    width: max-content;
-    margin-left: -10px;
-  }
-  .searchDiv ul {
-    justify-content: flex-start;
-    margin-left: -10px;
-  }
-  .imgLogoDiv {
-    grid-column: 1/1;
-    grid-row: 2/4;
-  }
-  .imgLogoDiv .logo {
-    width: -moz-max-content;
-    width: max-content;
-    margin-left: 50px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
   }
   .itemsDiv {
-    display: none;
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .itemsDiv ul {
+    justify-content: space-around;
+  }
+  .searchDiv {
+    grid-column: 1/4;
+    /* Updated from 1/3 */
+    grid-row: 1/2;
+    margin-left: 10px;
+  }
+  .searchDiv ul {
+    justify-content: center;
+  }
+  .imgLogoDiv {
+    grid-column: 1/4;
+    /* Updated from 2/3 */
+    grid-row: 2/3;
+    margin-left: 0;
+  }
+  .imgLogoDiv .logo {
+    margin-left: 380px;
+    text-align: center;
   }
   .cartDiv {
-    grid-column: 1/1;
-    grid-row: 4/4;
-    width: 200px;
+    grid-column: 1/4;
+    /* Updated from 3/3 */
+    grid-row: 4/5;
+    width: 100%;
+    margin-left: 10px;
   }
   .cartDiv ul {
-    font-size: small;
-    margin-right: 50px;
+    margin-right: 0;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* Adjust styles for medium-sized devices */
+  .imgLogoDiv {
+    grid-row: 2;
+    grid-column: 1/3;
+    justify-content: center;
+  }
+  .cartDiv {
+    margin-left: 5px;
+  }
+  .searchDiv ul {
+    justify-content: space-around;
+  }
+  /* Show itemsDiv */
+  .itemsDiv {
+    display: block;
+    margin-top: 20px;
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .itemsDiv ul {
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .headerDiv {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+  }
+  .imgLogoDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imgLogoDiv a {
+    margin-left: -300px;
+  }
+  .searchDiv,
+  .cartDiv {
+    grid-column: 1/2;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 10px;
+  }
+  .itemsDiv {
+    margin-top: 20px;
+    grid-row: 3;
+    grid-column: 1;
+    justify-content: space-around;
+    width: 500px;
+  }
+}
+@media screen and (max-width: 576px) {
+  /* Adjust styles for small-sized devices */
+  .headerDiv {
+    margin: 0 10px;
+  }
+  .searchDiv {
+    margin-left: 0;
+  }
+  .logo {
+    margin-left: 20px;
+  }
+  .cartDiv {
+    margin-left: 20px;
+  }
+}
+/* phones */
+@media screen and (width: 390px) and (height: 844px) {
+  .headerDiv {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+  }
+  .imgLogoDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imgLogoDiv .logo {
+    margin-left: 60%;
+  }
+  .searchDiv,
+  .cartDiv {
+    grid-column: 1/2;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 10px;
+  }
+  .itemsDiv {
+    display: block;
+    margin-top: 20px;
+    grid-row: 3;
+    grid-column: 1;
+    justify-content: space-around;
+    width: 100%;
   }
 }/*# sourceMappingURL=NavBar.css.map */
