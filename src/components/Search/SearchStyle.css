@@ -1,0 +1,43 @@
+.mainCardDiv {
+  width: 250px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  top: 50%;
+  left: 42.5%;
+}
+
+.searchItems {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+.searchItems input {
+  border-radius: 5px;
+}
+
+.buttonSearch {
+  width: 60px;
+  color: #020303;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: small;
+  border-radius: 5px;
+  background: radial-gradient(100% 100% at top left, #b6e2d3 98%, #229c73), radial-gradient(100% 100% at bottom right, #b6e2d3 98%, #229c73), radial-gradient(100% 100% at top left, #b6e2d3 98%, #229c73), radial-gradient(100% 100% at bottom right, #b6e2d3 98%, #229c73), #229c73;
+  -webkit-background-clip: text, text, padding-box, padding-box, text;
+  background-clip: text, text, padding-box, padding-box, text;
+  background-size: 0% 0%;
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.buttonSearch:hover {
+  background-size: 50% 100%;
+  border-radius: 20px;
+}/*# sourceMappingURL=SearchStyle.css.map */

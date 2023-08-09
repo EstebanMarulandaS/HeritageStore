@@ -20,7 +20,7 @@ export const FooterDesign = () => {
         </div>
 
         <div>
-          <p>Phone contact: (+57) 316 328 4486{<AiFillPhone />}</p>
+          <p>Phone contact: (+57)3163284486{<AiFillPhone />}</p>
         </div>
 
         <div>
@@ -45,7 +45,7 @@ export const FooterDesign = () => {
           </label>
         </div>
         <div className="sendBtn">
-            <button>send</button> 
+          <button>send</button>
         </div>
       </div>
 
@@ -55,30 +55,49 @@ export const FooterDesign = () => {
       <ul className="wrapper">
         <li className="icon facebook">
           <span className="tooltip">Facebook</span>
-          <a href="https://es-la.facebook.com/" target="_blank" rel="noreferrer"><span className="iconDiv">{<AiFillFacebook />}</span></a>
+          <a
+            href="https://es-la.facebook.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="iconDiv">{<AiFillFacebook />}</span>
+          </a>
         </li>
 
-      <li className="icon twitter">
+        <li className="icon twitter">
           <span className="tooltip">Twitter</span>
-          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><span className="iconDiv">{<AiFillTwitterCircle/>}</span></a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+            <span className="iconDiv">{<AiFillTwitterCircle />}</span>
+          </a>
         </li>
-        
+
         <li className="icon instagram">
           <span className="tooltip">Instagram</span>
-          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><span className="iconDiv">{<AiOutlineInstagram />}</span></a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+            <span className="iconDiv">{<AiOutlineInstagram />}</span>
+          </a>
         </li>
 
         <li className="icon github">
           <span className="tooltip">Github</span>
-          <a href="https://github.com/estebanmarulanda" target="_blank" rel="noreferrer"> <span className="iconDiv">
-            <AiOutlineGithub />
-          </span></a>
+          <a
+            href="https://github.com/estebanmarulanda"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            <span className="iconDiv">
+              <AiOutlineGithub />
+            </span>
+          </a>
         </li>
         <li className="icon youtube">
           <span className="tooltip">Youtube</span>
-          <a href="https://www.youtube.com/" target="_blank" rel="noreferrer"><span className="iconDiv">
-            <AiFillYoutube />
-          </span></a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
+            <span className="iconDiv">
+              <AiFillYoutube />
+            </span>
+          </a>
         </li>
       </ul>
       <div className="copyRight">

@@ -1,7 +1,7 @@
 .mainItemsDiv {
   background-color: rgb(255, 248, 245);
 }
-@media screen and (width: 390px) and (height: 844px) {
+@media screen and (width: 490px) and (height: 844px) {
   .mainItemsDiv .productsContainer {
     display: grid;
     grid-template-columns: max-content;
@@ -12,5 +12,20 @@
     grid-column: 1;
     grid-row: auto;
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 584px) and (max-width: 1280px) {
+  .mainItemsDiv {
+    background-color: rgb(255, 248, 245);
+  }
+  .mainItemsDiv .cardProduct {
+    grid-column: 1;
+    grid-row: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .mainItemsDiv .cardProduct .card {
+    text-align: center;
   }
 }/*# sourceMappingURL=ItemListContainerStyle.css.map */

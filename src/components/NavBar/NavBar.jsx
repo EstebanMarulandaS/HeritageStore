@@ -9,7 +9,7 @@ export function NavBar() {
     <div className="headerDiv">
       <div className="searchDiv">
         <ul>
-          <Link to="">
+          <Link to={"/search"}>
             <li>
               <RiSearchEyeLine />
               Search

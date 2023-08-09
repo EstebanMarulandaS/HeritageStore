@@ -2,7 +2,7 @@
     background-color: rgb(255 248 245);
 
 
-    @media screen and (width: 390px) and (height: 844px) {
+    @media screen and (width: 490px) and (height: 844px) {
 
         .productsContainer {
             display: grid;
@@ -18,4 +18,23 @@
         }
     }
 
+}
+
+
+.mainItemsDiv {
+    @media screen and (min-width: 584px) and (max-width: 1280px) {
+        background-color: rgb(255 248 245);
+
+        .cardProduct {
+            grid-column: 1;
+            grid-row: auto;
+            display: flex;
+            justify-content: center;
+
+            .card {
+                text-align: center;
+            }
+        }
+
+    }
 }
